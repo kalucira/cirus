@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data_Science_Project</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Data_Science_Project (1)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14591,7 +14591,7 @@ $\textbf{Data Science Course Final Project}$
 $\textbf{Project Milestone 2}$
 <br>
 <br>
-$\textbf{10/14/2022}$
+$\textbf{11/19/2022}$
 <br>
 <br></p>
 
@@ -14606,10 +14606,10 @@ $\textbf{10/14/2022}$
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>$\textbf{Project Goals:}$</p>
-<p>The goal of this project is to explore the temporal and spatial distribution of earthquakes around New Zealand from 1990 - 2022, and investigate the possible relation with the motion of the subducting plates.
+<p>The goal of this project is to explore the temporal and spatial distribution of earthquakes around New Zealand from 1990 - 2022, and investigate the possible relation with the motion of the subducting tectonic plates.
 <br>
 <br>
-The motivation of this project the series of migrating seismic swarms of small magnitude erathquakes which have been happening around New Zealand, with the country recording up to 15000 earthquakes per year.
+The motivation of this project the series of migrating seismic swarms of small and medium size magnitude earthquakes which have been happening around New Zealand, with the country recording up to 15000 earthquakes per year.
 <br>
 <br>
 In this project I will be working alone as required for graduate students and do hope to be working on it whenever time is available as planned.
@@ -14643,19 +14643,19 @@ The second set of data contains the locations and displacements of the the GPS s
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Installing the required softwares and libraries</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># Installing the required softwares and libraries</span>
 <span class="c1"># !pip install geopandas</span>
-<span class="o">!</span>pip install obspy <span class="p">;</span>
-<span class="o">!</span>grep <span class="s1">&#39;^deb &#39;</span> /etc/apt/sources.list <span class="p">|</span> <span class="err">\</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">obspy</span> <span class="p">;</span>
+<span class="err">!</span><span class="n">grep</span> <span class="s1">&#39;^deb &#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span> <span class="o">|</span> \
   <span class="n">sed</span> <span class="s1">&#39;s/^deb /deb-src /g&#39;</span> <span class="o">|</span> \
   <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">deb</span><span class="o">-</span><span class="n">src</span><span class="o">.</span><span class="n">list</span> <span class="p">;</span>
-<span class="o">!</span>apt-get update
+<span class="err">!</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 
-<span class="o">!</span>apt-get -qq build-dep python3-cartopy
-<span class="o">!</span>apt-get -qq remove python-shapely python3-shapely
+<span class="err">!</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">qq</span> <span class="n">build</span><span class="o">-</span><span class="n">dep</span> <span class="n">python3</span><span class="o">-</span><span class="n">cartopy</span>
+<span class="err">!</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">qq</span> <span class="n">remove</span> <span class="n">python</span><span class="o">-</span><span class="n">shapely</span> <span class="n">python3</span><span class="o">-</span><span class="n">shapely</span>
 
-<span class="o">!</span>pip install --no-binary shapely shapely --force
-<span class="o">!</span>pip install --no-binary cartopy <span class="nv">cartopy</span><span class="o">==</span><span class="m">0</span>.17.0
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">binary</span> <span class="n">shapely</span> <span class="n">shapely</span> <span class="o">--</span><span class="n">force</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">binary</span> <span class="n">cartopy</span> <span class="n">cartopy</span><span class="o">==</span><span class="mf">0.17.0</span>
 </pre></div>
 
      </div>
@@ -15021,7 +15021,7 @@ This works only for the obspy part of loading data because obspy requires some u
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[188]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#%pylab inline</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#%pylab inline</span>
 <span class="c1">#let&#39;s ignore all the warnings</span>
 <span class="c1">#import warnings</span>
 <span class="c1">#warnings.filterwarnings(&#39;ignore&#39;)</span>
@@ -15037,12 +15037,12 @@ This works only for the obspy part of loading data because obspy requires some u
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[184]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[210]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-<span class="o">%</span><span class="k">cd</span> /content/drive/My Drive/DataSci Project
+<span class="o">%</span><span class="n">cd</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">drive</span><span class="o">/</span><span class="n">My</span> <span class="n">Drive</span><span class="o">/</span><span class="n">DataSci</span> <span class="n">Project</span>
 </pre></div>
 
      </div>
@@ -15091,10 +15091,10 @@ This works only for the obspy part of loading data because obspy requires some u
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[185]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[211]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">obspy.clients.fdsn.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">obspy.clients.fdsn.client</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="kn">from</span> <span class="nn">obspy</span> <span class="kn">import</span> <span class="n">Stream</span><span class="p">,</span> <span class="n">UTCDateTime</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">matplotlib.dates</span> <span class="kn">import</span> <span class="n">date2num</span>
@@ -15130,7 +15130,7 @@ This works only for the obspy part of loading data because obspy requires some u
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[186]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">client_global</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;IRIS&quot;</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">client_global</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;IRIS&quot;</span><span class="p">)</span>
 
 <span class="n">starttime</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">endtime</span> <span class="o">=</span> <span class="n">UTCDateTime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">59</span><span class="p">)</span>
@@ -15196,7 +15196,7 @@ To see all events call &#39;print(CatalogObject.__str__(print_all=True))&#39;
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[187]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat_plot</span> <span class="o">=</span> <span class="n">cat1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;cartopy&#39;</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">cat_plot</span> <span class="o">=</span> <span class="n">cat1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;cartopy&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15254,7 +15254,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[189]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">magnitudes</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="o">.</span><span class="n">magnitudes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mag</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">cat1</span><span class="p">]</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">magnitudes</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="o">.</span><span class="n">magnitudes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mag</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">cat1</span><span class="p">]</span>
 <span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="o">.</span><span class="n">origins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">cat1</span><span class="p">]</span>
 <span class="n">depths</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="o">.</span><span class="n">origins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">depth</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">cat1</span><span class="p">]</span>
 <span class="n">Latitudes</span> <span class="o">=</span> <span class="p">[</span><span class="n">event</span><span class="o">.</span><span class="n">origins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">latitude</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">cat1</span><span class="p">]</span>
@@ -15286,7 +15286,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[190]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DataEQ</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="p">({</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">:</span><span class="n">magnitudes</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="n">time</span><span class="p">,</span> <span class="s1">&#39;depths&#39;</span><span class="p">:</span><span class="n">depths</span><span class="p">,</span> <span class="s1">&#39;Latitudes&#39;</span><span class="p">:</span><span class="n">Latitudes</span><span class="p">,</span> <span class="s1">&#39;Longitudes&#39;</span><span class="p">:</span><span class="n">Longitudes</span><span class="p">},</span> 
+<div class=" highlight hl-python"><pre><span></span><span class="n">DataEQ</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="p">({</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">:</span><span class="n">magnitudes</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="n">time</span><span class="p">,</span> <span class="s1">&#39;depths&#39;</span><span class="p">:</span><span class="n">depths</span><span class="p">,</span> <span class="s1">&#39;Latitudes&#39;</span><span class="p">:</span><span class="n">Latitudes</span><span class="p">,</span> <span class="s1">&#39;Longitudes&#39;</span><span class="p">:</span><span class="n">Longitudes</span><span class="p">},</span> 
                    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">,</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;depths&#39;</span><span class="p">,</span><span class="s1">&#39;Latitudes&#39;</span><span class="p">,</span><span class="s1">&#39;Longitudes&#39;</span><span class="p">])</span>
 <span class="n">DataEQ</span>
 </pre></div>
@@ -15536,7 +15536,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[191]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">year</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">year</span>
 <span class="n">DataEQ</span>
 </pre></div>
 
@@ -15785,7 +15785,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[192]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DataEQ</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">DataEQ</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15848,7 +15848,7 @@ memory usage: 5.7 MB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[193]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15920,7 +15920,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[194]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;A plot of magnitude against time for the earthquakes&#39;</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;A plot of magnitude against time for the earthquakes&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnitude&#39;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">magnitudes</span><span class="p">,</span><span class="s1">&#39;m--&#39;</span><span class="p">)</span>
@@ -15970,7 +15970,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[195]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;A plot of magnitude against depths for the earthquakes&#39;</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;A plot of magnitude against depths for the earthquakes&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;depths&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnitude&#39;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">depths</span><span class="p">,</span><span class="n">magnitudes</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="n">markerfacecolor</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
@@ -16032,7 +16032,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[196]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;depths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;depths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> 
+<div class=" highlight hl-python"><pre><span></span><span class="p">[</span><span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;depths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;depths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> 
  <span class="n">DataEQ</span><span class="p">[</span><span class="s1">&#39;depths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
 </pre></div>
 
@@ -16086,7 +16086,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[198]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Mag_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">DataEQ</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">])[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">Mag_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">DataEQ</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">])[</span><span class="s1">&#39;magnitudes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 <span class="n">Mag_df</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
 <span class="n">Mag_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Magnitudes&#39;</span><span class="p">],</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnitudes&#39;</span><span class="p">)</span>
@@ -16149,7 +16149,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[200]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Dep_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">DataEQ</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">])[</span><span class="s1">&#39;depths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">Dep_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">DataEQ</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;year&quot;</span><span class="p">])[</span><span class="s1">&#39;depths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 <span class="n">Dep_df</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
 <span class="n">Dep_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;depths&#39;</span><span class="p">],</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Depths&#39;</span><span class="p">)</span>
@@ -16228,14 +16228,14 @@ The unwanted columns showing the standard errors and locations in degrees, since
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[201]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[212]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_of_frams</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">list_of_frams</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">variables</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()</span>
 <span class="n">df</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
-    <span class="n">variables</span><span class="p">[</span><span class="s2">&quot;Station</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;/content/drive/My Drive/DataSci Project/Station</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">variables</span><span class="p">[</span><span class="s2">&quot;Station</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;../DataSci Project/Station</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
     <span class="n">df</span><span class="p">[</span><span class="s2">&quot;df</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_fwf</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Station</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">)</span>
     <span class="n">list_of_frams</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;df</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
 </pre></div>
@@ -16250,10 +16250,10 @@ The unwanted columns showing the standard errors and locations in degrees, since
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[202]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[213]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Datafram</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span> <span class="n">concat</span><span class="p">(</span><span class="n">list_of_frams</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">Datafram</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span> <span class="n">concat</span><span class="p">(</span><span class="n">list_of_frams</span><span class="p">)</span>
 <span class="n">Datafram</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">Datafram</span> <span class="o">=</span> <span class="n">Datafram</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="s1">&#39;week&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;yyyy.yyyy&#39;</span><span class="p">,</span><span class="s1">&#39;_e0(m)&#39;</span><span class="p">,</span><span class="s1">&#39;____n0(m)&#39;</span><span class="p">,</span><span class="s1">&#39;u0(m)&#39;</span><span class="p">,</span><span class="s1">&#39;__MJD&#39;</span><span class="p">,</span><span class="s1">&#39;reflon&#39;</span><span class="p">,</span><span class="s1">&#39;_ant(m)&#39;</span><span class="p">,</span><span class="s1">&#39;sig_e(m)&#39;</span><span class="p">,</span><span class="s1">&#39;sig_n(m)&#39;</span><span class="p">,</span>
                                   <span class="s1">&#39;sig_u(m)&#39;</span><span class="p">,</span><span class="s1">&#39;__corr_en&#39;</span><span class="p">,</span><span class="s1">&#39;__corr_eu&#39;</span><span class="p">,</span><span class="s1">&#39;__corr_nu&#39;</span><span class="p">,</span><span class="s1">&#39;_latitude(deg)&#39;</span><span class="p">,</span><span class="s1">&#39;_longitude(deg)&#39;</span><span class="p">,</span><span class="s1">&#39;__height(m)&#39;</span><span class="p">])</span>
@@ -16275,13 +16275,13 @@ The unwanted columns showing the standard errors and locations in degrees, since
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[202]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[213]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-9d280195-8e45-4825-98c1-91b64a8fc9ca">
+  <div id="df-512bfe91-6af4-4f0a-896e-3f80a1db490a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -16401,7 +16401,7 @@ The unwanted columns showing the standard errors and locations in degrees, since
 </table>
 <p>77518 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9d280195-8e45-4825-98c1-91b64a8fc9ca')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-512bfe91-6af4-4f0a-896e-3f80a1db490a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -16452,12 +16452,12 @@ The unwanted columns showing the standard errors and locations in degrees, since
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9d280195-8e45-4825-98c1-91b64a8fc9ca button.colab-df-convert');
+          document.querySelector('#df-512bfe91-6af4-4f0a-896e-3f80a1db490a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9d280195-8e45-4825-98c1-91b64a8fc9ca');
+          const element = document.querySelector('#df-512bfe91-6af4-4f0a-896e-3f80a1db490a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -16509,7 +16509,7 @@ Vh, Vz and Vt are the resultant horizontal component, vertical component  and th
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[203]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Datafram</span><span class="p">[</span><span class="s1">&#39;YYMMMDD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">Datafram</span><span class="p">[</span><span class="s1">&#39;YYMMMDD&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%y%b</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">Datafram</span><span class="p">[</span><span class="s1">&#39;YYMMMDD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">Datafram</span><span class="p">[</span><span class="s1">&#39;YYMMMDD&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%y%b</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">Datafram</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;YYMMMDD&#39;</span><span class="p">:</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;__east(m)&#39;</span><span class="p">:</span><span class="s1">&#39;Xd&#39;</span><span class="p">,</span><span class="s1">&#39;_north(m)&#39;</span><span class="p">:</span><span class="s1">&#39;Yd&#39;</span><span class="p">,</span><span class="s1">&#39;____up(m)&#39;</span><span class="p">:</span><span class="s1">&#39;Zd&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">Datafram</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">Datafram</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">year</span>
 <span class="n">Datafram</span><span class="p">[</span><span class="s1">&#39;time_dur&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Datafram</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
@@ -16534,7 +16534,7 @@ Vh, Vz and Vt are the resultant horizontal component, vertical component  and th
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[204]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Datafram</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">Datafram</span>
 </pre></div>
 
      </div>
@@ -16879,7 +16879,7 @@ From the graphs, we can say that some parts of the plate are accelerating while 
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[205]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">Datafram</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">Datafram</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
                <span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;site&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Vh&#39;</span>
               <span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 </pre></div>
@@ -16963,7 +16963,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[206]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">Datafram</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">Datafram</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
                <span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;site&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Vz&#39;</span>
               <span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 </pre></div>
@@ -17035,7 +17035,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[207]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">Datafram</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">Datafram</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
                <span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;site&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Vt&#39;</span>
               <span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 </pre></div>
@@ -17119,7 +17119,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[208]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">])[</span><span class="s2">&quot;Xd&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">])[</span><span class="s2">&quot;Yd&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">])[</span><span class="s2">&quot;Zd&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()]</span>
+<div class=" highlight hl-python"><pre><span></span><span class="p">[</span><span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">])[</span><span class="s2">&quot;Xd&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">])[</span><span class="s2">&quot;Yd&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">])[</span><span class="s2">&quot;Zd&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()]</span>
 </pre></div>
 
      </div>
@@ -17205,7 +17205,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[209]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Ave_Vh</span> <span class="o">=</span> <span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">])[</span><span class="s2">&quot;Vh&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">Ave_Vh</span> <span class="o">=</span> <span class="n">Datafram</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;site&quot;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">])[</span><span class="s2">&quot;Vh&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">Ave_Vh</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">Ave_Vh</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;site&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Vh&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
 </pre></div>
@@ -17277,7 +17277,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[181]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-python"><pre><span></span>
 </pre></div>
 
      </div>
@@ -17293,7 +17293,7 @@ jp-needs-light-background
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-python"><pre><span></span>
 </pre></div>
 
      </div>
